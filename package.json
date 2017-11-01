@@ -1,0 +1,12 @@
+{
+  "name": "WNAB",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "feek": "meteor --port 8010"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "meteor-node-stubs": "^0.3.2"
+  }
+}
