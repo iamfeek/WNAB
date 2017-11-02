@@ -8,11 +8,15 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "bootstrap": "^4.0.0-beta.2",
+    "event-emitter": "^0.3.5",
     "history": "^4.7.2",
+    "lodash": "^4.17.4",
     "meteor-node-stubs": "^0.3.2",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-mounter": "^1.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "reactstrap": "^5.0.0-alpha.3"
   }
 }

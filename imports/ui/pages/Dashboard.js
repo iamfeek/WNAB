@@ -3,8 +3,8 @@ import React from 'react';
 class Dashboard extends React.Component{
 	render(){
 		return(
-				<div>
-					Dashboard
+				<div className="row">
+					<h1>Dashboard</h1>
 				</div>
 		)
 	}

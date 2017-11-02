@@ -1,9 +1,13 @@
 import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { mount } from 'react-mounter';
+
 import MainLayout from "../../ui/containers/MainLayout";
+import DashboardLayout from "../../ui/containers/DashboardLayout";
+
 import HomeContainer from '../../ui/containers/HomeContainer';
 import DashboardContainer from '../../ui/containers/DashboardContainer'
+import CategoriesContainer from '../../ui/containers/CategoriesContainer'
 
 import Login from "../../ui/pages/Login";
 import Register from "../../ui/pages/Register";
@@ -48,15 +52,30 @@ FlowRouter.route( '/register', {
 	},
 } );
 
-FlowRouter.route( '/dashboard', {
+var dashboardRoutes = FlowRouter.group( {
+	prefix: '/d',
+	name: 'dashboard'
+} );
+
+dashboardRoutes.route( '/', {
 	name: 'dashboard',
 	action() {
-		mount( MainLayout, {
+		mount( DashboardLayout, {
 			main: <DashboardContainer/>,
 			active: "dashboard"
 		} );
 	},
 } );
+
+dashboardRoutes.route( '/categories', {
+	name: "dashboard.categories",
+	action() {
+		mount( DashboardLayout, {
+			main: <CategoriesContainer/>,
+			active: "dashboard.categories"
+		} )
+	}
+} )
 
 function becauseAuthenticated( context, redirect ) {
 	if ( Meteor.userId() ) {

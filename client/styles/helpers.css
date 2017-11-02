@@ -1,3 +1,11 @@
 .clickable{
     cursor: pointer;
 }
+
+.m-b-4{
+    margin-bottom: 4px;
+}
+
+.m-b-8{
+    margin-bottom: 8px;
+}

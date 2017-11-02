@@ -49,24 +49,26 @@ const Navbar = props => {
 	
 	return (
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-				<a className="navbar-brand" href={ FlowRouter.path( "home" ) }>WNAB</a>
-				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon"></span>
-				</button>
-				
-				<div className="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul className="navbar-nav mr-auto">
-						{
-							user && <AuthedActions/>
-						}
-					</ul>
+				<div className="container">
+					<a className="navbar-brand" href={ FlowRouter.path( "home" ) }>WNAB</a>
+					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+									aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span className="navbar-toggler-icon"></span>
+					</button>
 					
-					<ul className="navbar-nav ml-auto">
-						{
-							user ? <AuthedLinks/> : <UnauthedLinks/>
-						}
-					</ul>
+					<div className="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul className="navbar-nav mr-auto">
+							{
+								user && <AuthedActions/>
+							}
+						</ul>
+						
+						<ul className="navbar-nav ml-auto">
+							{
+								user ? <AuthedLinks/> : <UnauthedLinks/>
+							}
+						</ul>
+					</div>
 				</div>
 			</nav>
 	)
